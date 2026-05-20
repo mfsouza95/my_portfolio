@@ -36,7 +36,7 @@ export default function Home() {
             <a className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider px-5 py-2.5 rounded-md border border-white/10 bg-white/5 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all shadow-md group" href="https://www.linkedin.com/in/muriloferrazsouza/" target="_blank">
               <span className="text-blue-500 group-hover:text-blue-400">{'> '}</span>Linkedin
             </a>
-            <a className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider px-5 py-2.5 rounded-md border border-teal-500/30 bg-teal-500/5 text-teal-400 hover:border-teal-400 hover:bg-teal-500/10 transition-all shadow-md group" href="/CV-Murilo Ferraz de Souza.pdf" download>
+            <a className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider px-5 py-2.5 rounded-md border border-teal-500/30 bg-teal-500/5 text-teal-400 hover:border-teal-400 hover:bg-teal-500/10 transition-all shadow-md group" href="/CV - Murilo Ferraz de Souza.pdf" download>
               <span className="text-teal-400 group-hover:text-teal-300">{'> '}</span>Download CV
             </a>
           </div>

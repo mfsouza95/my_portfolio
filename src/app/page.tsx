@@ -100,8 +100,17 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-200 tracking-tight">## my_Store ( )</h2>
             <p className="text-xs md:text-sm font-mono text-slate-500 mt-2">// try adding my CV to your cart:</p>
             
-            <div className="flex justify-center py-12">
-              <ProductCard title="CV" />
+            <div className="flex flex-wrap justify-center gap-10 py-12">
+              <ProductCard
+                productId="cv_pt"
+                title="CV - PT/BR"
+                fileUrl="/CV - Murilo Ferraz de Souza.pdf"
+              />
+              <ProductCard
+                productId="cv_en"
+                title="CV - English"
+                fileUrl="/Resume - Murilo Ferraz.pdf"
+              />
             </div>
           </div>
         </div>

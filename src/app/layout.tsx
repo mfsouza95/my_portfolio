@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bungee} from "next/font/google";
+import { Geist, Geist_Mono, Bungee } from "next/font/google";
+import { CartProvider } from "./context/CartContext";
 import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 import Background from "./components/Background";
 import "./globals.css";
 
@@ -18,7 +20,7 @@ const bungee = Bungee({
   variable: "--font-bungee",
   subsets: ["latin"],
   weight: "400",
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,11 +38,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${bungee.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Background />
-        <Header></Header>
-        <main className="font-mono">
-          {children}
-        </main>
+        <CartProvider>
+          <Background />
+          <Header />
+          <Sidebar />
+          <main className="font-mono">
+            {children}
+          </main>
+        </CartProvider>
       </body>
     </html>
   );

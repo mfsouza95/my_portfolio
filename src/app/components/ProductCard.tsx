@@ -1,12 +1,18 @@
+'use client'
 import { File } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 interface ProductCardProps {
+  productId: string;
   title: string;
+  fileUrl: string;
   description?: string;
   imageUrl?: string;
 }
 
-export default function ProductCard({ title }: ProductCardProps) {
+export default function ProductCard({ productId, title, fileUrl }: ProductCardProps) {
+  const { dispatch } = useCart();
+
   return (
     <div className="group flex flex-col items-center justify-between bg-slate-950/40 border border-white/10 hover:border-blue-500/50 rounded-lg overflow-hidden h-48 w-44 transition-all duration-300 shadow-xl relative backdrop-blur-sm">
       <div className="absolute top-2 left-2 right-2 flex items-center justify-between pointer-events-none">
@@ -20,12 +26,14 @@ export default function ProductCard({ title }: ProductCardProps) {
           <div className="absolute inset-0 bg-blue-500/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity rounded-full" />
         </div>
       </div>
-      <div className="w-full text-center bg-white/2 border-t border-white/5 py-2.5 group-hover:bg-blue-500/10 transition-colors">
+      <button
+        onClick={() => dispatch({ type: 'ADD', productId, fileUrl, title })}
+        className="w-full text-center bg-white/2 border-t border-white/5 py-2.5 group-hover:bg-blue-500/10 transition-colors cursor-pointer focus:outline-none"
+      >
         <span className="text-[11px] font-mono font-semibold text-teal-400 group-hover:text-teal-300 uppercase tracking-wider block select-none">
           Add to cart
         </span>
-      </div>
-      
+      </button>
     </div>
   );
 }

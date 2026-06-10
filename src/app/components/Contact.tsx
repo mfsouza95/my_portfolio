@@ -179,7 +179,7 @@ export default function Contact() {
 
         {mounted && (
           <Turnstile
-            siteKey="0x4AAAAAADiMgEQgOnPO4XDP"
+            siteKey="0x4AAAAAADiOXQ30aD1g9oX8"
             onSuccess={(token) => setTurnstileToken(token)}
             onExpire={() => setTurnstileToken(null)}
             options={{ theme: 'dark' }}

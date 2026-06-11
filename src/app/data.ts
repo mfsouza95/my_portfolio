@@ -59,3 +59,7 @@ export const profileData = {
     cvDownload: "/docs/curriculo_murilo.pdf"
   }
 };
+
+export const aboutDescription = {
+  description: "I'm Murilo, a Front-end, Fullstack, and Web Development enthusiast with 2 years of experience building scalable applications. I have hands-on expertise in JavaScript, React, Node.js, System Design, SQL databases, and documentation. Currently, I’m interested in diving deeper into cloud and mobile development. Throughout my career, I have been recognized for my adaptability, fast learning, and precise communication. I’ve contributed to dozens of applications used by thousands of customers daily, ensuring both performance and reliability. In addition my technical skills, I am known for my kind and humble approach and I am always eager to collaborate and learn from my colleagues to improve our daily workflows and team environment."
+}

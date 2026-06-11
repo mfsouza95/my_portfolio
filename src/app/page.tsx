@@ -3,7 +3,7 @@ import AboutMe from "./components/AboutMe";
 import SkillsCard from "./components/SkillsCard";
 import ProductCard from "./components/ProductCard";
 import Contact from "./components/Contact";
-import {projectsData, skillsData} from "./data"
+import {projectsData, skillsData, aboutDescription} from "./data"
  
 export default function Home() {
   return (
@@ -71,7 +71,7 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-200 tracking-tight">## About_me( )</h2>
             <p className="text-xs md:text-sm font-mono text-slate-500 mt-2">// get to know me better: </p>
             <div className="py-12 flex justify-center w-full overflow-hidden">
-              <AboutMe />
+              <AboutMe  description={aboutDescription.description}/>
             </div>
           </div>
         </div>

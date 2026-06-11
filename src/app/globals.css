@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -54,18 +58,8 @@ body {
   }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
 @keyframes blink {
   50% { border-color: transparent }
-}
-
-.animate-typing {
-  /* Altere os 3.5s para controlar a velocidade da digitação */
-  animation: typing 3.5s steps(40, end) forwards;
 }
 
 .animate-blink {

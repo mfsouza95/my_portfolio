@@ -26,17 +26,20 @@ export const skillsData = [
   {
     id: "frontend",
     title: "Front-End",
-    description: "React, Next.js, TypeScript, Tailwind CSS, Vite, Radix UI, State Management."
+    subdescription: "// building what users see and feel",
+    description: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Radix UI", "State Management"]
   },
   {
     id: "backend",
     title: "Back-End",
-    description: "Node.js, Express, RESTful APIs, GraphQL, autenticação JWT e arquitetura MVC."
+    subdescription: "// powering the logic behind the scenes",
+    description: ["Node.js", "Express", "RESTful APIs", "GraphQL", "JWT", "MVC"]
   },
   {
     id: "data",
     title: "Data",
-    description: "PostgreSQL, MongoDB, Redis, modelagem de dados."
+    subdescription: "// storing and structuring information",
+    description: ["PostgreSQL", "MongoDB", "Redis", "Data Modelling"]
   }
 ];
 

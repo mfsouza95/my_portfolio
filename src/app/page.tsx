@@ -47,7 +47,7 @@ export default function Home() {
           <div className="mb-6 text-center">
             <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-200 tracking-tight">## my_Projects( )</h2>
             <p className="text-xs md:text-sm font-mono text-slate-500 mt-2">// some projects that I worked on:</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 md:gap-16 py-12 px-2 max-w-4xl mx-auto"> 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10 md:gap-16 py-12 px-2 mx-auto"> 
               {projectsData.map((project) => (
                 <ProjectModal
                   key={project.id}
@@ -82,12 +82,13 @@ export default function Home() {
           <div className="mb-6 text-center">
             <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-200 tracking-tight">## my_Skills ( )</h2>
             <p className="text-xs md:text-sm font-mono text-slate-500 mt-2">// technologies that I work with: </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-12 mx-auto">
               {skillsData.map((skill) => (
                 <SkillsCard 
                   key={skill.id}
                   title={skill.title}
                   description={skill.description}
+                  subdescription={skill.subdescription}
                 />
               ))}
             </div>

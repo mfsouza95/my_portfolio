@@ -1,11 +1,7 @@
 'use client'
 import { ShoppingBasket } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-
-export interface HeaderProps {
-  currentLang?: 'PT' | 'EN';
-  onLangChange?: () => void;
-}
+import { HeaderProps } from "../types";
 
 export default function Header({ currentLang = 'EN', onLangChange }: HeaderProps) {
   const { dispatch, totalQuantity } = useCart();

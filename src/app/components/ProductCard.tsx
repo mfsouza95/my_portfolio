@@ -1,14 +1,7 @@
 'use client'
 import { File } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-
-interface ProductCardProps {
-  productId: string;
-  title: string;
-  fileUrl: string;
-  description?: string;
-  imageUrl?: string;
-}
+import { ProductCardProps } from "../types";
 
 export default function ProductCard({ productId, title, fileUrl }: ProductCardProps) {
   const { dispatch } = useCart();

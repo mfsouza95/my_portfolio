@@ -1,25 +1,6 @@
 'use client'
 import { createContext, useContext, useReducer } from 'react';
-
-interface CartItem {
-  quantity: number;
-  fileUrl: string;
-  title: string;
-}
-
-interface CartState {
-  items: { [productId: string]: CartItem };
-  isOpen: boolean;
-}
-
-type CartAction =
-  | { type: 'ADD'; productId: string; fileUrl: string; title: string }
-  | { type: 'INCREASE'; productId: string }
-  | { type: 'DECREASE'; productId: string }
-  | { type: 'CLEAR_ITEM'; productId: string }
-  | { type: 'CLEAR_ALL' }
-  | { type: 'TOGGLE_SIDEBAR' }
-  | { type: 'CLOSE_SIDEBAR' };
+import { CartState, CartAction } from "../types";
 
 const initialState: CartState = {
   items: {},

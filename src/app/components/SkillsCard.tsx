@@ -1,8 +1,8 @@
-import ProjectProps from "../types";
+import { SkillsProps } from "../types";
 
-export default function SkillsCard({ title, description }: ProjectProps) {
+export default function SkillsCard({ title, description, subdescription }: SkillsProps) {
   return (
-    <div className="group flex flex-col bg-[#020617] border border-white/10 hover:border-blue-500/30 rounded-lg overflow-hidden max-w-sm w-full min-h-95 transition-colors duration-300 shadow-2xl relative">
+    <div className="group flex flex-col bg-[#020617] border border-white/10 hover:border-blue-500/30 rounded-lg overflow-hidden w-full transition-colors duration-300 shadow-2xl relative">
       <div className="absolute top-0 inset-x-0 z-10 pl-4 pr-1 py-1 flex items-center justify-between select-none bg-transparent w-full">
         <div className="flex-1 flex justify-center pl-16">
           <span className="text-[10px] font-mono text-slate-500 group-hover:text-slate-400 tracking-wide truncate max-w-45 transition-colors">
@@ -21,23 +21,34 @@ export default function SkillsCard({ title, description }: ProjectProps) {
           </div>
         </div>
       </div>
-      <div className="flex-1 pt-12 pb-6 px-6 flex flex-col justify-between w-full">
-        <div>
-          <h4 className="text-base font-mono font-bold text-slate-200 group-hover:text-blue-400 text-center transition-colors mb-3">
-            {title}
-          </h4>
-          <p className="text-slate-400 font-sans text-xs md:text-sm leading-relaxed line-clamp-5 text-left">
-            {description}
-          </p>
+
+      <div className="flex-1 pt-12 pb-6 px-6 flex flex-col gap-4 w-full">
+        <h4 className="text-base font-mono font-bold text-slate-200 group-hover:text-blue-400 text-center transition-colors">
+          {title}
+        </h4>
+
+        <p className="text-slate-500 font-mono text-xs">
+          {subdescription}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {description.map((tool) => (
+            <span
+              key={tool}
+              className="px-3 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 font-mono text-xs tracking-wide"
+            >
+              {tool}
+            </span>
+          ))}
         </div>
-        <div className="text-[10px] font-mono text-slate-600 flex justify-between items-center w-full pt-3 border-t border-white/5 mt-6">
+
+        <div className="text-[10px] font-mono text-slate-600 flex justify-between items-center w-full pt-3 border-t border-white/5 mt-auto">
           <span>status: active</span>
           <span className="opacity-0 group-hover:opacity-100 transition-opacity text-teal-500">
             ready
           </span>
         </div>
       </div>
-
     </div>
   );
 }

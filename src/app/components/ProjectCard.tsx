@@ -3,7 +3,7 @@ import ProjectProps from "../types";
 
 export default function ProjectCard({ title, description, imageUrl }: ProjectProps) {
   return (
-    <div className="group flex flex-col text-left bg-[#020617] border border-white/10 hover:border-blue-500/30 rounded-lg overflow-hidden max-w-md w-full transition-all duration-300 shadow-2xl relative">
+    <div className="group flex flex-col text-left bg-[#020617] border border-white/10 hover:border-blue-500/30 rounded-lg overflow-hidden w-full transition-all duration-300 shadow-2xl relative">
       
       <div className="absolute top-0 inset-x-0 z-10 pl-4 pr-1 py-1 flex items-center justify-between select-none bg-transparent w-full">
         <span className="text-[10px] font-mono text-white/40 group-hover:text-white/70 tracking-wide truncate max-w-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] transition-colors">
@@ -22,7 +22,7 @@ export default function ProjectCard({ title, description, imageUrl }: ProjectPro
         </div>
       </div>
 
-      <div className="relative h-40 w-full overflow-hidden">
+      <div className="relative h-52 w-full overflow-hidden">
         <img 
           src={imageUrl} 
           alt={title} 
@@ -31,7 +31,7 @@ export default function ProjectCard({ title, description, imageUrl }: ProjectPro
         <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/0 to-black/10 transition-colors" />
       </div>
 
-      <div className="flex-1 p-6 flex flex-col justify-between w-full min-h-55">
+      <div className="flex-1 p-6 flex flex-col justify-between w-full min-h-64">
         <div>
           <h3 className="text-lg font-bold text-slate-200 group-hover:text-white mb-3 tracking-tight transition-colors">
             {title}

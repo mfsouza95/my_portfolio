@@ -48,7 +48,7 @@ export const translations = {
     about: {
       heading: "## About_me( )",
       subheading: "// get to know me better:",
-      description: "I'm Murilo, a Front-end, Fullstack, and Web Development enthusiast with 2 years of experience building scalable applications. I have hands-on expertise in JavaScript, React, Node.js, System Design, SQL databases, and documentation. Currently, I'm interested in diving deeper into cloud and mobile development. Throughout my career, I have been recognized for my adaptability, fast learning, and precise communication. I've contributed to dozens of applications used by thousands of customers daily, ensuring both performance and reliability. In addition to my technical skills, I am known for my kind and humble approach and I am always eager to collaborate and learn from my colleagues to improve our daily workflows and team environment.",
+      description: "I'm Murilo, a Front-end, Fullstack, and Web Development enthusiast with 2 years of experience building scalable applications. I have hands-on expertise in JavaScript, React, Node.js, Python, SQL databases, and documentation. Currently, I'm interested in diving deeper into cloud and mobile development. Throughout my career, I have been recognized for my adaptability, fast learning, and precise communication. I've contributed to dozens of applications used by thousands of customers daily, ensuring both performance and reliability. In addition to my technical skills, I am known for my kind and humble approach and I am always eager to collaborate and learn from my colleagues to improve our daily workflows and team environment.",
     },
     skills: {
       heading: "## my_Skills ( )",
@@ -58,19 +58,19 @@ export const translations = {
           id: "frontend",
           title: "Front-End",
           subdescription: "// building what users see and feel",
-          description: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Radix UI", "State Management"],
+          description: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "State Management"],
         },
         {
           id: "backend",
           title: "Back-End",
           subdescription: "// powering the logic behind the scenes",
-          description: ["Node.js", "Express", "RESTful APIs", "GraphQL", "JWT", "MVC"],
+          description: ["Node.js", "Express", "Python", "RESTful APIs", "GraphQL", "JWT", "MVC"],
         },
         {
           id: "data",
           title: "Data",
           subdescription: "// storing and structuring information",
-          description: ["PostgreSQL", "MongoDB", "Redis", "Data Modelling"],
+          description: ["PostgreSQL", "MongoDB", "Data Modelling"],
         },
       ],
     },
@@ -170,7 +170,7 @@ export const translations = {
     about: {
       heading: "## Sobre_mim( )",
       subheading: "// conheça-me melhor:",
-      description: "Sou Murilo, entusiasta de Front-end, Fullstack e Desenvolvimento Web com 2 anos de experiência construindo aplicações escaláveis. Tenho experiência prática em JavaScript, React, Node.js, Design de Sistemas, bancos de dados SQL e documentação. Atualmente, tenho interesse em me aprofundar em desenvolvimento cloud e mobile. Ao longo da minha carreira, fui reconhecido pela minha adaptabilidade, aprendizado rápido e comunicação precisa. Contribuí para dezenas de aplicações usadas por milhares de clientes diariamente, garantindo desempenho e confiabilidade. Além das habilidades técnicas, sou conhecido pela minha abordagem gentil e humilde, sempre disposto a colaborar e aprender com meus colegas para melhorar nossos fluxos de trabalho e o ambiente da equipe.",
+      description: "Sou Murilo, entusiasta de Front-end, Fullstack e Desenvolvimento Web com 2 anos de experiência construindo aplicações escaláveis. Tenho experiência prática em JavaScript, React, Node.js, Python, bancos de dados SQL e documentação. Atualmente, tenho interesse em me aprofundar em desenvolvimento cloud e mobile. Ao longo da minha carreira, fui reconhecido pela minha adaptabilidade, aprendizado rápido e comunicação precisa. Contribuí para dezenas de aplicações usadas por milhares de clientes diariamente, garantindo desempenho e confiabilidade. Além das habilidades técnicas, sou conhecido pela minha abordagem gentil e humilde, sempre disposto a colaborar e aprender com meus colegas para melhorar nossos fluxos de trabalho e o ambiente da equipe.",
     },
     skills: {
       heading: "## minhas_Habilidades ( )",
@@ -180,19 +180,19 @@ export const translations = {
           id: "frontend",
           title: "Front-End",
           subdescription: "// construindo o que os usuários veem e sentem",
-          description: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Radix UI", "State Management"],
+          description: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "State Management"],
         },
         {
           id: "backend",
           title: "Back-End",
           subdescription: "// alimentando a lógica por trás das cenas",
-          description: ["Node.js", "Express", "RESTful APIs", "GraphQL", "JWT", "MVC"],
+          description: ["Node.js", "Express", "Python", "RESTful APIs", "GraphQL", "JWT", "MVC"],
         },
         {
           id: "data",
           title: "Dados",
           subdescription: "// armazenando e estruturando informações",
-          description: ["PostgreSQL", "MongoDB", "Redis", "Modelagem de Dados"],
+          description: ["PostgreSQL", "MongoDB", "Modelagem de Dados"],
         },
       ],
     },

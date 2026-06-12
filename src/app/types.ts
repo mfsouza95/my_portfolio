@@ -47,4 +47,25 @@ export type CartAction =
     imageUrl?: string;
   }
 
+  export type Status = 'idle' | 'loading' | 'success' | 'error';
+  
+  export interface FormFields {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+  }
+  
+  export interface FormErrors {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    message?: string;
+  }
+
+  export interface TurnstileWidgetProps {
+    onSuccess: (token: string) => void;
+    onExpire: () => void;
+  }
+
   

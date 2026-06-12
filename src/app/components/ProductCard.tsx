@@ -1,10 +1,12 @@
 'use client'
 import { File } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import { ProductCardProps } from "../types";
+import { useLang } from '../context/LangContext';
+import { ProductCardProps } from '../types';
 
 export default function ProductCard({ productId, title, fileUrl }: ProductCardProps) {
   const { dispatch } = useCart();
+  const { t } = useLang();
 
   return (
     <div className="group flex flex-col items-center justify-between bg-slate-950/40 border border-white/10 hover:border-blue-500/50 rounded-lg overflow-hidden h-48 w-44 transition-all duration-300 shadow-xl relative backdrop-blur-sm">
@@ -24,7 +26,7 @@ export default function ProductCard({ productId, title, fileUrl }: ProductCardPr
         className="w-full text-center bg-white/2 border-t border-white/5 py-2.5 group-hover:bg-blue-500/10 transition-colors cursor-pointer focus:outline-none"
       >
         <span className="text-[11px] font-mono font-semibold text-teal-400 group-hover:text-teal-300 uppercase tracking-wider block select-none">
-          Add to cart
+          {t.products.addToCart}
         </span>
       </button>
     </div>

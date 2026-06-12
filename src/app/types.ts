@@ -62,10 +62,4 @@ export type CartAction =
     email?: string;
     message?: string;
   }
-
-  export interface TurnstileWidgetProps {
-    onSuccess: (token: string) => void;
-    onExpire: () => void;
-  }
-
   

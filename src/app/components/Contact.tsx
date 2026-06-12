@@ -1,23 +1,9 @@
 'use client'
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, MessageSquare, Send, User } from 'lucide-react';
 import { Turnstile } from '@marsidev/react-turnstile';
 import { useLang } from '../context/LangContext';
-import { Status, FormFields, FormErrors, TurnstileWidgetProps } from '../types';
-
-const TurnstileWidget = memo(function TurnstileWidget({ onSuccess, onExpire }: TurnstileWidgetProps) {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
-  if (!mounted) return null;
-  return (
-    <Turnstile
-      siteKey="YOUR_TURNSTILE_SITE_KEY"
-      onSuccess={onSuccess}
-      onExpire={onExpire}
-      options={{ theme: 'dark' }}
-    />
-  );
-});
+import { Status, FormFields, FormErrors } from '../types';
 
 export default function Contact() {
   const { t } = useLang();
@@ -124,10 +110,14 @@ export default function Contact() {
           {errors.message && <p className="text-red-400 text-xs mt-1">{errors.message}</p>}
         </div>
         {status === 'error' && <p className="text-red-400 text-xs text-center">{t.contact.errorMessage}</p>}
-        <TurnstileWidget
-          onSuccess={(token) => setTurnstileToken(token)}
-          onExpire={() => setTurnstileToken(null)}
-        />
+        {mounted && (
+          <Turnstile
+            siteKey="0x4AAAAAADiOXQ30aD1g9oX8"
+            onSuccess={(token) => setTurnstileToken(token)}
+            onExpire={() => setTurnstileToken(null)}
+            options={{ theme: 'dark' }}
+          />
+        )}
         <div className="flex justify-end pt-2">
           <button type="submit" disabled={status === 'loading' || (mounted && !turnstileToken)}
             className="flex items-center justify-center gap-2 w-full md:w-auto bg-linear-to-r from-teal-500 to-blue-500 text-white font-medium text-sm px-6 py-3 rounded-lg hover:opacity-90 active:scale-95 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">

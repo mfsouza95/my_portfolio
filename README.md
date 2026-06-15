@@ -6,8 +6,6 @@ Personal portfolio site built with Next.js, React, and TypeScript. It showcases 
 
 ## Screenshots
 
-> Drop your screenshot files into a `docs/screenshots/` folder at the root of the repo, then reference them below with relative paths, e.g. `![Home section](./docs/screenshots/home.png)`.
-
 ![Home section](./docs/screenshots/home.png)
 ![Projects section](./docs/screenshots/my_projects.png)
 ![Skills section](./docs/screenshots/my_skills.png)
